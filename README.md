@@ -94,7 +94,7 @@ After you have prepared the input data, run the codes cell by cell in the .ipynb
 
 
 ## Citing CREformer
-The manuscript is currently under review. You can cite the version of this paper on bioRxiv.
+The manuscript is currently under review. You can cite the version of this paper on bioRxiv: https://doi.org/10.1101/2024.12.19.629561
 
 
 ## Correspondance
