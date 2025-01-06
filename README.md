@@ -42,7 +42,7 @@ Relevant codes were documented in "codes/example_attention_compute.ipynb". Brief
 * Default file path
   * The codes will assume the input data to be placed in "data/info_attention.txt".
   * The codes will load the pretrained CREformer model from "pretrained_models/".
-  * The downloading process requires installation of git-lfs. The instruction is: ```git-lfs clone https://huggingface.co/GenomicIntelligenceDamoAcademy/CREformer```.
+  * The downloading process requires installation of git-lfs. The instruction is: "git-lfs clone https://huggingface.co/GenomicIntelligenceDamoAcademy/CREformer".
 
 After you have prepared the input data, run the codes cell by cell in the .ipynb file. The codes will print out the output information, which includes the Attention Score for each ATAC peak.
   * Output data format:
