@@ -6,6 +6,7 @@ from einops import rearrange
 import math
 
 class AttentionPool(nn.Module):
+    ## Attention pooling block ##
     def __init__(self, dim, pool_size = 8):
         super().__init__()
         self.pool_size = pool_size
@@ -40,7 +41,7 @@ class AttentionPool(nn.Module):
         return (x * attn).sum(dim = -1)
     
 class DNA_Embedding(nn.Module):
-    
+    ## DNA embedding layer ##
     def __init__(self):
         super(DNA_Embedding, self).__init__()
         dim = 2048
@@ -53,7 +54,7 @@ class DNA_Embedding(nn.Module):
         return Genome_embed
     
 class Sig_Embedding(nn.Module):
-    
+    ## ATAC embedding layer ##
     def __init__(self):
         super(Sig_Embedding, self).__init__()
         dim = 2048
@@ -66,6 +67,7 @@ class Sig_Embedding(nn.Module):
         return signal_embed
     
 class Encoder(nn.Module):
+    ## transformer encoder blocks for Transformer-1, 2 in CREformer-Elementary, and Transformer in CREformer-Regulatory ##
     def __init__(self, d_model=2048, batch_first=True, nhead=32, dim_ffn=2048*4, num_layer=20, drop=0, LNM=1e-05):
         super(Encoder, self).__init__()
         self.norm = nn.LayerNorm(d_model)
@@ -98,7 +100,7 @@ class Encoder1(nn.Module):
         return output
     
 class Pos_L1_Embed(nn.Module):
-    
+    ## Position-1 embedding layer ##
     def __init__(self):
         super(Pos_L1_Embed, self).__init__()
         dim = 2048
@@ -111,7 +113,7 @@ class Pos_L1_Embed(nn.Module):
         return position_embed
     
 class Pos_L2_Embed(nn.Module):
-    
+    ## Position-2 embedding layer ##
     def __init__(self):
         super(Pos_L2_Embed, self).__init__()
         dim = 2048
@@ -124,7 +126,7 @@ class Pos_L2_Embed(nn.Module):
         return position_embed
     
 class Pos_L3_Embed(nn.Module):
-
+    ## TSS-distance embedding layer ##
     def __init__(self, max_len):
         super(Pos_L3_Embed, self).__init__()
         dim = 2048
@@ -137,6 +139,7 @@ class Pos_L3_Embed(nn.Module):
         return position_embed
     
 class ANN(nn.Module):
+    ## Feed forward layer ##
     def __init__(self):
         super(ANN, self).__init__()
         self.l1 = nn.Linear(1 * 150 * 2048 , 32)
