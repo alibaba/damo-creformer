@@ -69,7 +69,7 @@ After you have prepared the input data, run the codes cell by cell in the .ipynb
 The manuscript is currently under review. You can cite the preprint version of this paper on bioRxiv: https://doi.org/10.1101/2024.12.19.629561
 
 
-## Correspondance
+## Correspondence
 Fei Gu (gufei.gf@alibaba-inc.com), Damo Academy, Alibaba Group.
 
 Zikun Yang (yangzikun.yzk@alibaba-inc.com), Damo Academy, Alibaba Group.
