@@ -6,7 +6,7 @@ from einops.layers.torch import Rearrange
 from einops import rearrange
 import torch.nn.functional as F
 
-## compute the attention scores on each regulatory element ##
+## compute the attention score on each regulatory element ##
 
 def compute_selfattention(transformer_encoder, x, i_layer, d_model, num_heads):
 
