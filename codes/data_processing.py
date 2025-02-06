@@ -1,4 +1,5 @@
 def tokenizer (x, k):
+    ## K-mer tokenization for DNA sequences ##
     tok = ''
     i   = 0
     while i <= len(x)-k:
@@ -9,6 +10,7 @@ def tokenizer (x, k):
     return tok
 
 def pre_processing (x, genome_dict):
+    ## transfer the K-mer tokenized DNA sequences into integers ##
     x = x.split()
     for i in range (len(x)):
         x[i] = genome_dict[x[i]]
@@ -16,7 +18,7 @@ def pre_processing (x, genome_dict):
     return x
 
 def pre_pro (x, k):
-    
+    ## Discretize the atac signals ##
     y = x.copy()
     
     x = x[:len(x)-k+1]
@@ -136,6 +138,7 @@ def pre_pro (x, k):
     return x
 
 def narrowPeak_Reader(path):
+    ## .narrowPeak file reader ##
     f = open(path, encoding = "utf-8")
     E = f.read()
     E = E.split('\n')
@@ -145,7 +148,7 @@ def narrowPeak_Reader(path):
     return E
 
 def value_fixer(CHR_value):
-    
+    ## fix the nan values in the .bigWig files ##
     for m in range (len(CHR_value)):
         if math.isnan(CHR_value[m]) == True:
             CHR_value[m]=0.0
@@ -153,6 +156,7 @@ def value_fixer(CHR_value):
     return CHR_value
 
 def txt_Reader(path):
+    ## .txt file reader ##
     f = open(path, encoding = "utf-8")
     E = f.read()
     E = E.split('\n')
