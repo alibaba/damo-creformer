@@ -2,9 +2,9 @@
 
 
 ## Introduction
-This is the official codebase for CREformer: Multiomic foundation model predicts epigenetic regulation by zero-shot.
+This is the official codebase for CREformer: Integrated bulk-single-cell foundation model enables zero-shot prediction of functional perturbations and cell fate dynamics.
 
-Cis-Regulatory Element Transformer (CREformer) is an LLM-based foundation model for zero-shot predictions of functional genomic elements and their regulatory effects on genes and cellular states. CREformer has 3 billion parameters and was pretrained on massive bulk and single-cell multiomic data. Typically, without the need of additional training data or fine-tuning, CREformer can realize the predictions of master regulators, enhancers, GRNs, variant effects, cell state transitions, and disease treatment in a zero-shot manner.
+cis-Regulatory Element Transformer for perturbation study (CREformer) is an LLM-based foundation model for zero-shot predictions of functional perturbations and cell fate dynamics. CREformer has 3 billion parameters and was pretrained on massive bulk and single-cell multiomic data. Typically, without the need of task-specific training, CREformer can realize the predictions of functional regulations, perturbations of genomic elements, genes, and sequences in a zero-shot manner, including the simulation of cell state transitions and disease treatment.
 
 
 ## Online apps
