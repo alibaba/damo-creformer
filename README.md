@@ -46,9 +46,9 @@ Relevant codes were documented in "codes/example_attention_compute.ipynb". Brief
 After you have prepared the input data, run the codes cell by cell in the .ipynb file. The codes will print out the output information, which includes the Attention Score for each ATAC peak.
   * Output data format:
       >chrX_48648355_48648753 <br>
-      Attention score:  0.8549946546554565 <br>
+      Attention score:  0.9368568062782288 <br>
       >chrX_48652218_48652494 <br>
-      Attention score:  1.2512104511260986 <br>
+      Attention score:  1.2849560976028442 <br>
       ... ...
 
 
